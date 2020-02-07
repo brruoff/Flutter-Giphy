@@ -21,10 +21,10 @@ class _HomePageState extends State<HomePage> {
 
     if (_search == null || _search.isEmpty) {
       response = await http.get(
-          'https://api.giphy.com/v1/gifs/trending?api_key=xs5DLmiziCauJ9A3mAdel29pIzOLBypg&limit=20&rating=G');
+          'https://api.giphy.com/v1/gifs/trending?api_key=USER_KEY&limit=20&rating=G');
     } else {
       response = await http.get(
-          'https://api.giphy.com/v1/gifs/search?api_key=xs5DLmiziCauJ9A3mAdel29pIzOLBypg&limit=19&offset=$_offset&rating=G&lang=en&q=$_search');
+          'https://api.giphy.com/v1/gifs/search?api_key=USER_KEY&limit=19&offset=$_offset&rating=G&lang=en&q=$_search');
     }
     return json.decode(response.body);
   }
